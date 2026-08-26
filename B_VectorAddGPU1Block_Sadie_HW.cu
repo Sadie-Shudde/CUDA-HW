@@ -1,4 +1,4 @@
-// Name:
+// Name: Sadie Shudde
 // Vector addition on the GPU, with one block
 // To compile: nvcc B_VectorAddGPU1Block_Sadie_HW.cu -o temp
 /*
