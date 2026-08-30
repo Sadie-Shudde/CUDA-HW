@@ -24,7 +24,7 @@
 
 /*
  Explain what you did to fix the code:
- 
+ Changed the block size to the specified 256. Used the formulas in class for the Grid size and the global ID
 */
 
 // Include files
@@ -76,7 +76,7 @@ void setUpDevices()
 	BlockSize.z = 1;
 	
 	//Change this to the formula we had in class although I think we accidently got BS and N switched
-	//This will make sure we always calculate nough blocks to handle all N elements
+	//This will make sure we always calculate enough blocks to handle all N elements
 	//It will round up when N is not evenly divisible by the block size
 	GridSize.x = ((N-1)/BlockSize.x) + 1;
 	GridSize.y = 1;
@@ -122,6 +122,7 @@ void addVectorsCPU(float *a, float *b, float *c, int n)
 __global__ void addVectorsGPU(float *a, float *b, float *c, int n)
 {
 	//Make sure to calculate the global thread id
+	//Will place you in the correct block thread
 	int id = blockIdx.x * blockDim.x + threadIdx.x;
 	
 	//Can now switch to an if instead of a while loop
