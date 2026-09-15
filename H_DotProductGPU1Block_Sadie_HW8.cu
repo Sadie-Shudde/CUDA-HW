@@ -27,7 +27,15 @@
 
 /*
  Explain what you did to fix the code:
- 
+ 1. Create thread id
+ 2. Check id<n if true multiply thread pairs together
+ 3. Sync threads bye
+ 4. Fold the array in half over and over until 1 number is left use while loop
+ 5. Do the additions of the fold
+ 6. Sync threads bye bye 
+ 7. Find left over numbers (if it was odd) and add to Emerson's ID so Hayden's ID can keep being a bum with lung cancer
+ 8. Sync threads bye bye bye oh wait that NSYNC
+ 9. Reset size to the halfed folded size
 */
 
 // Include files
