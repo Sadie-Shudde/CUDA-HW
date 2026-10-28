@@ -1,6 +1,6 @@
 // Name: Sadie Shudde
 // Vector addition on two GPUs.
-// nvcc Q_VectorAdd2GPUS.cu -o temp
+// nvcc Q_VectorAdd2GPUS_Sadie_HW19.cu -o temp
 /*
  What to do:
  This code adds two vectors of any length on a GPU.
@@ -46,6 +46,18 @@
  Also DWTS is on Monday next week not tuesday so I will still send out messages to vote for Connor ten times at 21523! ITS DISNEY Night
  https://www.youtube.com/watch?v=6ebFieXxC6E Connors Dance!
  https://www.youtube.com/watch?v=RnHnp50tJhQ Ezra (The one legged guys dance) not as good this week
+ 
+ Overall my dance ranking for the week was
+ 1. Connor 
+ 2. Ezra
+ 3. Tyler 
+ 4. Jenna 
+ 5. Harry 
+ 6. Amber
+ 7. Maura
+ 8. Jackson
+ 9. Tatyana
+ 10. Julia
 */
 
 // Include files
