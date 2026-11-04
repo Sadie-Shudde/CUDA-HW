@@ -41,7 +41,7 @@
  Season 6 - A bomb blast under Archie’s bed catapults the gang into Rivervale, a parallel supernatural dimension where Archie is sacrificed Midsommar-style and Veronica outsmarts the Devil. When they return to regular reality, the explosion gives the teens actual superpowers to fight an immortal villain and destroy a comet.
  Season 7 - Destroying the comet sends the entire town hurtling back in time to 1955, where the characters are trapped as high schoolers with wiped memories. To cap off the surreal ride, the series finale reveals that instead of choosing between Archie, Betty, Veronica, or Jughead, the teens magically remember all timelines and decide to date all four of them in a 1950s polyamorous group arrangement.
 
- 
+ I only watched season 1 but I thought it was important for both of us to learn about this!
 */
 
 // Include files
