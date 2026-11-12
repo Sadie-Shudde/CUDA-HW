@@ -126,10 +126,9 @@ void setup()
 	cudaErrorCheck(__FILE__, __LINE__);
 	if(deviceCount < 2)
 	{
-		printf("\nYou need at least 2 GPUs if you only have one consider being a chinese spy\nI hear being one can get you close to some good GPU's \n");
+		printf("\nYou need at least 2 GPUs\n");
 		exit(0);
-		//I am aware this is huang 
-		//And that two huangs don't make a right but it does make Jensen's wife rich
+		
 	}
 
 	Half0 = (N+1)/2; //GPU 0 gets first half
