@@ -1,6 +1,6 @@
 // Name: Sadie Shudde
 // nBody code on multiple GPUs. 
-// nvcc T1_1GPU_To_2GPUs_Nbody_Sadie_HW23.cu -o temp -lglut -lm -lGLU -lGL
+// nvcc T1_1GPU_To_2GPUs_NBody_Sadie_HW23.cu -o temp -lglut -lm -lGLU -lGL
 
 /*
  What to do:
@@ -96,7 +96,7 @@ void drawPicture()
 	glClear(GL_DEPTH_BUFFER_BIT);
 	
 	cudaSetDevice(0); //After each exchange GPU 0 will hold all current positions
-	cudaMemcpy(P, PPGU, N*sizeof(float3), cudaMemcpyDeviceToHost);
+	cudaMemcpy(P, PGPU, N*sizeof(float3), cudaMemcpyDeviceToHost);
 	cudaErrorCheck(__FILE__, __LINE__);
 	
 	glColor3d(1.0,1.0,0.5);
@@ -126,8 +126,7 @@ void setup()
 	cudaErrorCheck(__FILE__, __LINE__);
 	if(deviceCount < 2)
 	{
-		printf("\nYou need at least 2 GPUs if you only have one consider being a chinese spy\n
-			 I hear being one can get you close to some good GPU's \n");
+		printf("\nYou need at least 2 GPUs if you only have one consider being a chinese spy\nI hear being one can get you close to some good GPU's \n");
 		exit(0);
 		//I am aware this is huang 
 		//And that two huangs don't make a right but it does make Jensen's wife rich
@@ -343,9 +342,9 @@ void nBody()
 		cudaErrorCheck(__FILE__, __LINE__);
 
 		//Swap the updated halves so both GPU's have everyone's new position
-		cudaMemcpyPeer(PGPU1, 1, PGU, 0, Half0*sizeof(float3));
+		cudaMemcpyPeer(PGPU1, 1, PGPU, 0, Half0*sizeof(float3));
 		cudaErrorCheck(__FILE__, __LINE__);
-		cudaMemcpyPeer(PGPU+Half0, 1, PGU1+Half0, 0, Half1*sizeof(float3));
+		cudaMemcpyPeer(PGPU+Half0, 1, PGPU1+Half0, 0, Half1*sizeof(float3));
 		cudaErrorCheck(__FILE__, __LINE__);
 		if(drawCount == DRAW_RATE) 
 		{	
